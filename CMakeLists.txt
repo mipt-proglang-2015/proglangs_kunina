@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.0)
+set(CMAKE_VERBOSE_MAKEFILE on)
+find_package(PythonLibs 3.4 REQUIRED)
+include_directories(${PYTHON_INCLUDE_DIRS})
+python_add_module(graph_algorithm graph_algorithm.cpp)
+target_link_libraries(graph_algorithm ${PYTHON_LIBRARIES})
